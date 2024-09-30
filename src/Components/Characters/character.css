@@ -1,0 +1,100 @@
+.character-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.character-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    perspective: 1000px;
+    border-radius: 150px;
+    padding: 45px 0px;
+}
+
+.character-card img {
+    width: 70%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+    backface-visibility: hidden;
+}
+
+.character-card:hover {
+    transform: rotateY(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.character-card:hover img {
+    transform: scale(1.1);
+}
+
+.character-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 100px; */
+}
+
+.character-card:hover::after {
+    opacity: 1;
+}
+
+.character-card:hover img {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.character-card::before {
+    content: "Amazing Character";
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.character-card:hover::before {
+    opacity: 1;
+}
+
+
+.super-title{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 2.5rem;
+    color: black;
+    position: relative;
+    margin-bottom: 40px;
+    font-weight:700;
+}
+
+.super-title::after{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: #fc0000; 
+    margin: 10px auto 0;
+}

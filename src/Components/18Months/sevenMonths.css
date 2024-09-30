@@ -1,0 +1,94 @@
+.fou-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    /* background-color: #f8f9fa; */
+    /* margin-top: 150px; */
+    gap:25px;
+}
+
+.fou-product-card {
+    flex: 0 1 calc(25% - 05px);
+    /* background-color: #ffffff; */
+    background-color: #f29e03;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.6' fill='%23ffa61d'/%3E%3C/svg%3E");
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    padding: 15px;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.fou-product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 100px 100px 0 0;
+    transition: transform 0.3s ease; 
+    padding: 25px;
+    border-top: 3px solid black;
+}
+
+.fou-product-card h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333;
+    font-weight: 700;
+}
+
+.fou-product-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.fou-product-card .price {
+    font-size: 1.4em;
+    color: white;
+    font-weight: bold;
+}
+
+.fou-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.fou-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.fou-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.fou-product-card:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .fou-product-card {
+        flex: 0 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .fou-product-card {
+        flex: 0 1 100%;
+    }
+}
